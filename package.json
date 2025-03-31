@@ -1,0 +1,30 @@
+{
+  "name": "pupeteer-with-authentication",
+  "version": "1.0.0",
+  "description": "MCP server for browser automation using Puppeteer",
+  "license": "MIT",
+  "author": "Nathan West",
+  "homepage": "https://modelcontextprotocol.io",
+  "bugs": "https://github.com/modelcontextprotocol/servers/issues",
+  "type": "module",
+  "bin": {
+    "mcp-server-puppeteer": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc && node -e \"require('fs').chmodSync('dist/index.js', '755')\"",
+    "prepare": "npm run build",
+    "watch": "tsc --watch"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.0.1",
+    "dotenv": "^16.4.7",
+    "puppeteer": "^23.4.0"
+  },
+  "devDependencies": {
+    "shx": "^0.3.4",
+    "typescript": "^5.6.2"
+  }
+}
